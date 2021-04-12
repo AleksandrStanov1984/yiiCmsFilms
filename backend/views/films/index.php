@@ -1,6 +1,6 @@
 <?php
 //
-
+//
 $this->title = 'Фильмы';
 
 use yii\helpers\Html; ?>
