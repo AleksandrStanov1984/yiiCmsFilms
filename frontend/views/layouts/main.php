@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 
 AppAsset::register($this);
 ?>
@@ -26,7 +27,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap" style="background-color: #053c61">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
@@ -36,22 +37,21 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Главная', 'url' => ['/site/index']],
+        ['label' => 'Афиша', 'url' => ['/film/affiche']],
+      //  ['label' => 'О кинотеатре', 'url' => ['/site/about']],
     ];
+
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'Вход', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Выход (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
+            ) . Html::endForm() . '</li>';
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

@@ -1,4 +1,9 @@
 <?php
+
+
+
+
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -22,7 +27,6 @@ return [
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the backend
             'name' => 'advanced-backend',
         ],
         'log' => [
@@ -37,14 +41,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
     ],
     'params' => $params,
 ];
