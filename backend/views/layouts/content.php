@@ -26,11 +26,7 @@ use dmstr\widgets\Alert;
         <?php } ?>
 
         <?=
-        Breadcrumbs::widget(
-            [
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]
-        ) ?>
+        Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
     </section>
 
     <section class="content">
@@ -43,7 +39,7 @@ use dmstr\widgets\Alert;
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.0
     </div>
-    <strong>Copyright &copy; 2020<a href="http://almsaeedstudio.com"> Aleksandr A. stanov</a>.</strong> All rights
+    <strong>Copyright &copy; 2020<a href="http://almsaeedstudio.com"> Aleksandr A. Stanov</a>.</strong> All rights
     reserved.
 </footer>
 
