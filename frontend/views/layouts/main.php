@@ -38,8 +38,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Главная', 'url' => ['/site/index']],
-        ['label' => 'Афиша', 'url' => ['/film/affiche']],
-      //  ['label' => 'О кинотеатре', 'url' => ['/site/about']],
+        ['label' => 'Афиша', 'url' => ['/film/poster']],
     ];
 
     if (Yii::$app->user->isGuest) {

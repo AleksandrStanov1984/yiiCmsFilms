@@ -7,7 +7,7 @@ return [
         '@npm'   => '@vendor/npm-asset',
     ],
     'bootstrap' => [
-        'common\bootstrap\SetUp',
+        'common\bootstrap\SetIn',
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [

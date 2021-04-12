@@ -1,8 +1,10 @@
 <?php
-use yii\helpers\Html;
 
-/* @var $this \yii\web\View */
-/* @var $content string */
+
+
+
+
+use yii\helpers\Html;
 
 
 if (class_exists('backend\assets\AppAsset')) {
@@ -28,23 +30,19 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
 <body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
 <div class="wrapper">
-
     <?= $this->render(
         'header.php',
         ['directoryAsset' => $directoryAsset]
     ) ?>
-
     <?= $this->render(
         'left.php',
         ['directoryAsset' => $directoryAsset]
     )
     ?>
-
     <?= $this->render(
         'content.php',
         ['content' => $content, 'directoryAsset' => $directoryAsset]
     ) ?>
-
 </div>
 
 <?php $this->endBody() ?>

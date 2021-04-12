@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 namespace frontend\controllers;
 
 use Yii;
@@ -11,7 +15,6 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
-use frontend\models\ContactForm;
 
 /**
  * Site controller
@@ -74,17 +77,6 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
-
-    /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
 
     /**
      * Logs in a user.

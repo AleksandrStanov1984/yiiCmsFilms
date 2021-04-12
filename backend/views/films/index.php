@@ -1,20 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: anton
- * Date: 01.03.19
- * Time: 12:46
- */
+
 
 $this->title = 'Фильмы';
 
-/**@var \common\domain\Film\Film[] $films */
-
 use yii\helpers\Html; ?>
-<div class="films-index">
+<div>
     <!--  //  --><?php //var_dump($films);?>
     <div class="row">
-
         <?php if ($films && count($films) > 0) : ?>
             <?php foreach ($films as $film): ?>
                 <div class="col-lg-2 " style="text-align: center; margin: 0 0 10px 60px">
@@ -32,8 +24,5 @@ use yii\helpers\Html; ?>
         <?php else: ?>
             <h2 style="text-align: center">На данный момент список фильмов пуст</h2>
         <?php endif ?>
-
     </div>
-
-
 </div>

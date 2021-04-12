@@ -8,12 +8,10 @@ return [
     'showScriptName' => false,
     'rules' => [
         ''              => 'site/index',
-        'about'         => 'site/about',
-        'about/news'    => 'site/news',
         'signup'        => 'site/signup',
         'login'         => 'site/login',
-        'affiche'       => 'cinema/affiche',
-        'film/<id>'     => 'cinema/film',
+        'poster'       => 'film/poster',
+        'film/<id>'     => 'film/film',
     ]
 ];
 

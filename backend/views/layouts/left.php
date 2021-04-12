@@ -1,3 +1,6 @@
+
+
+
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -14,18 +17,12 @@
             </div>
         </div>
 
-
-
         <?= dmstr\widgets\Menu::widget(
             [
-                'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
-                'items' => [
+                'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'], 'items' => [
                     ['label' => 'Главная страница', 'icon' => 'home', 'url' => ['/'], 'active' => $this->context->id == 'site'],
                     ['label' => 'Фильмы', 'icon' => 'film', 'url' => ['/films'], 'active' => $this->context->id == 'films'],
                 ],
-            ]
-        ) ?>
-
+            ]) ?>
     </section>
-
 </aside>

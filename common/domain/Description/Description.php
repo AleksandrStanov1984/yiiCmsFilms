@@ -3,8 +3,6 @@
 
 
 
-namespace common\domain\Metadata;
-
 use common\domain\Film\Film;
 use yii\db\ActiveRecord;
 
@@ -13,17 +11,12 @@ use yii\db\ActiveRecord;
  *
  * @property integer $id
  * @property integer $film_id
- * @property string $year
- * @property string $director
+ * @property string producing_country
  * @property string $producer
- * @property string $composer
- * @property string $screenwriter
- * @property string $operator
- * @property integer $budget
- * @property integer $age
- * @property float $duration
+ * @property string $actors
+ * @property string date_of_creation
  */
-class Metadata extends ActiveRecord
+class Description extends ActiveRecord
 {
     public static function tableName()
     {

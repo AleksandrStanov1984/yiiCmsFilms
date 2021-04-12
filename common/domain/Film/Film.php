@@ -1,8 +1,10 @@
 <?php
 
+
+
 namespace common\domain\Film;
 
-use common\domain\Metadata\Metadata;
+use Description;
 use Yii;
 use yii\db\ActiveRecord;
 
@@ -12,12 +14,12 @@ use yii\db\ActiveRecord;
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property integer $trailer_url
- * @property integer $main_poster_id
+ * @property string img_url
+ * @property string youtube_url
+ * @property string created_at
  */
 class Film extends ActiveRecord
 {
-
     public static function tableName(): string
     {
         return '{{films}}';
@@ -32,19 +34,8 @@ class Film extends ActiveRecord
         return $res = $command->queryAll();
     }
 
-    public static function create($name, $description, $trailerUrl)
+    public function getData()
     {
-        $film = new self();
-
-        $film->name = $name;
-        $film->description = $description;
-        $film->trailer_url = $trailerUrl;
-
-        return $film;
-    }
-
-    public function getMetadata()
-    {
-        return Metadata::find()->where(['film_id' => $this->id]);
+        return Description::find()->where(['film_id' => $this->id]);
     }
 }

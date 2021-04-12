@@ -14,6 +14,5 @@ return [
         'logout'                    => 'site/logout',
         'films'                     => 'films/index',
         'films/<id>'                => 'films/view',
-        'films/meta/<id>'           => 'metadata/view',
     ]
 ];

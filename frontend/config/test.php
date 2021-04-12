@@ -5,7 +5,7 @@ return [
         'assetManager' => [
             'basePath' => __DIR__ . '/../web/assets',
         ],
-        'urlManager' => [
+        'routesUrl' => [
             'showScriptName' => true,
         ],
         'request' => [

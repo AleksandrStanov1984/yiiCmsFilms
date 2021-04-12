@@ -26,7 +26,6 @@ return [
             ],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced',
             'cookieParams' => [
                 'httpOnly' => true,
@@ -45,8 +44,8 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'backendUrlManager' => require __DIR__ . '/../../backend/config/urlManager.php',
-        'frontendUrlManager' => require __DIR__ . '/urlManager.php',
+        'backendUrlManager' => require __DIR__ . '/../../backend/config/routesUrl.php',
+        'frontendUrlManager' => require __DIR__ . '/routesUrl.php',
         'UrlManager' => function() {
             return Yii::$app->get('frontendUrlManager');
         },

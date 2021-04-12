@@ -1,16 +1,17 @@
 <?php
+
+
+
+
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \common\models\LoginForm */
 
 $this->title = 'Sign In';
 
 $fieldOptions1 = [
     'options' => ['class' => 'form-group has-feedback'],
-    'inputTemplate' => "{input}<span class='glyphicon glyphicon-envelope form-control-feedback'></span>"
+    'inputTemplate' => "{input}<span class='glyphicon glyphicon-user form-control-feedback'></span>"
 ];
 
 $fieldOptions2 = [
@@ -21,22 +22,16 @@ $fieldOptions2 = [
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Kino</b>CMS</a>
+        <b>Username</b>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-
         <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
 
-        <?= $form
-            ->field($model, 'username', $fieldOptions1)
-            ->label(false)
+        <?= $form->field($model, 'username', $fieldOptions1)->label(false)
             ->textInput(['placeholder' => $model->getAttributeLabel('username')]) ?>
 
-        <?= $form
-            ->field($model, 'password', $fieldOptions2)
-            ->label(true)
+        <?= $form->field($model, 'password', $fieldOptions2)->label(true)
             ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
 
         <div class="row">
@@ -49,10 +44,7 @@ $fieldOptions2 = [
             </div>
             <!-- /.col -->
         </div>
-
-
         <?php ActiveForm::end(); ?>
-
     </div>
     <!-- /.login-box-body -->
 </div><!-- /.login-box -->
